@@ -265,7 +265,7 @@ everyauth
       return usersByDropboxId[dropboxUserMetadata.uid] ||
         (usersByDropboxId[dropboxUserMetadata.uid] = addUser('dropbox', dropboxUserMetadata));
     })
-    .redirectPath('/')
+    .redirectPath('/');
 
 everyauth.vimeo
 	.consumerKey(conf.vimeo.consumerKey)
@@ -274,7 +274,7 @@ everyauth.vimeo
 		return usersByVimeoId[vimeoUser.id] ||
 			(usersByVimeoId[vimeoUser.id] = vimeoUser);
 	})
-	.redirectPath('/')
+  .redirectPath('/');
 
 everyauth.justintv
   .consumerKey(conf.justintv.consumerKey)
@@ -283,7 +283,7 @@ everyauth.justintv
     return usersByJustintvId[justintvUser.id] ||
       (usersByJustintvId[justintvUser.id] = addUser('justintv', justintvUser));
   })
-  .redirectPath('/')
+  .redirectPath('/');
 
 everyauth['37signals']
   .appId(conf['_37signals'].clientId)
@@ -292,7 +292,7 @@ everyauth['37signals']
     return usersBy37signalsId[_37signalsUser.id] ||
       (usersBy37signalsId[_37signalsUser.identity.id] = addUser('37signals', _37signalsUser));
   })
-  .redirectPath('/')
+  .redirectPath('/');
 
 everyauth.tumblr
   .consumerKey(conf.tumblr.consumerKey)
